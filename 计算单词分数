@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include <string.h>
+#define N 20 //定义字符串长度
+
+int main()
+{
+	int s = 0;//用于存储大写字母值的和
+	int k = 0;//用于存储小写字母值的和
+	int i;
+	char word[N];
+
+	printf("请输入英文单词：\n");
+	scanf("%s",word);
+
+		for (i=0;i<strlen(word);i++)
+		{
+			if(word[i]>='A'&& word[i]<='Z')
+			{
+			  s = s+(word[i]-64);
+			}else
+			{
+			  k = k+(word[i]-96);
+			}
+		}
+
+		printf("该单词的分数为：%d\n",s+k);
+	
+}
